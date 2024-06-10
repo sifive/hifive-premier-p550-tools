@@ -1,0 +1,5 @@
+STM32F407VET6_BMC.elf is MCU firmware that needs to be flashed into
+MCU using JTAG interface.
+
+For steps to flash MCU firmware, please refer to document
+"hifive-premier-p550-software-reference-manual.pdf".
