@@ -1,0 +1,32 @@
+EsBurnTool is a linux based programming tool which is
+used to program bootchain, kernel and rootfs images to the board.
+
+Bootchain image needs to be flashed to SPI Flash present on SoM Board
+while kernel and rootfs will be stored on Carrier Board eMMC.
+
+EsBurnTool will program images to board based on configurations
+present in config.ini file.
+
+Two seperate config.ini files are present in this directory.
+1. spi_config.ini - To flash bootchain image to SPI flash
+2. emmc_config.ini - To flash kernel and rootfs to eMMC
+
+Usage: sudo EsBurnTool -c <config.ini file>
+
+	For e.g:
+	--------
+	To flash bootchain image to SPI Flash
+		sudo EsBurnTool -c spi_config.ini
+
+	To flash kernel and/or rootfs to eMMC
+		sudo EsBurnTool -c emmc_config.ini
+
+To upadte partition table into eMMC, change emmc_config.ini file
+as suggested below.
+- Enable "erase_flash" parameter and update to 'y'
+- Enable "[mmc partition table]" section
+
+---------------------------------------------------------
+Version : 2024-07-10
+MD5     : 0da36b8cea6ab2feca2e3cae787238d4
+---------------------------------------------------------

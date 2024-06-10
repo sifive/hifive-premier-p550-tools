@@ -1,0 +1,39 @@
+EsBurnTool.exe is a windows based programming tool which is
+used to program bootchain, kernel and rootfs images to the board.
+
+Bootchain image needs to be flashed to SPI Flash present on SoM Board
+while kernel and rootfs will be stored on Carrier Board eMMC.
+
+EsBurnTool.exe will program images to board based on configurations
+present in config.ini file.
+
+Two seperate config.ini files are present in this directory.
+1. spi_config.ini - To flash bootchain image to SPI flash
+2. emmc_config.ini - To flash kernel and rootfs to eMMC
+
+Prerequisite:
+- Install USB to serial driver in the Windows host system by running
+  UsbDriverTool.exe provided under drivers/UsbDriverTool directory.
+
+Usage:
+
+1] Open console e.g. Windows PowerShell
+2] Run EsBurnTool.exe
+   
+   For e.g.
+   --------
+
+   To flash bootchain image to SPI Flash
+        EsBurnTool.exe -c spi_config.ini
+
+   To flash kernel and/or rootfs to eMMC
+        EsBurnTool.exe -c emmc_config.ini
+
+To upadte partition table into eMMC, change emmc_config.ini file
+as suggested below.
+- Enable "erase_flash" parameter and update to 'y'
+- Enable "[mmc partition table]" section
+
+---------------------------------------------------------
+MD5     : d6386b283168d8a6ad36b34481088db6
+---------------------------------------------------------
