@@ -1,0 +1,21 @@
+esdebug is used for SoC debugging that uses SPI interface.
+
+In this debugging method, SoC acts as SPI slave and external
+SPI master communicates with this SPI slave to get access of the system.
+
+This tool depends on some libraries which are given along with the tool.
+Add library path to your environment.
+For example:
+# export LD_LIBRARY_PATH=<path where libraries are present>
+
+Usage: esdebug <option> <arguments>
+
+Examples:
+1. To read SoC registers
+./esdebug --rw 0x51810668 
+
+2. To write SoC registers
+./esdebug --ww 0x51810668,0xdeadbeef 
+
+For usage and more information, please refer to document
+"hifive-premier-p550-software-reference-manual.pdf".
