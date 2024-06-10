@@ -1,0 +1,36 @@
+STM32F407VET6_BMC.elf is MCU firmware that needs to be flashed into
+MCU using JTAG interface.
+
+Release version	: 1.4 
+md5sum			: 1bfdffed978d647fdcd119e0f4134eb7
+
+Firmware flashing steps
+-----------------------
+1] Connect MCU JTAG interface to linux PC.
+	i.e.
+	- Connect carrier board USB type C port to PC USB port. Carrier board
+	USB type C port internally connected to MCU JTAG interface.
+
+2] Copy mcu-firmware directory to PC.
+
+3] Extract riscv-openocd-0.11.0-2021.11.1-x86_64-linux-ubuntu14.tar file.
+	e.g
+	# cd mcu-firmware
+	# tar -xf riscv-openocd-0.11.0-2021.11.1-x86_64-linux-ubuntu14.tar
+
+4] Run "start_stm32.sh" script in PC.
+	e.g.
+	# cd mcu-firmware
+	# ./start_stm32.sh 
+
+5] Open telnet console in PC.
+	e.g.
+	# telnet 127.0.0.1 4444
+
+6] Run below commands on telnet console sequentially.
+	> halt
+	> program /home/user/mcu-firmware/STM32F407VET6_BMC.elf		
+		Note: Ensure that "Programming Finished" string is printed after
+		programming completes for the successful programming.
+	> reset
+
