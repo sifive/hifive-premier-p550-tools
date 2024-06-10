@@ -1,0 +1,10 @@
+JTAG tool is used for SoC debugging purpose.
+
+To use JTAG tool:
+  Extract riscv-openocd-0.11.0-2021.11.1-x86_64-linux-ubuntu14.tar file.
+
+  Run below command to access and debug mcpu(p550) using JTAG tool.
+  sudo ./riscv-openocd-0.11.0-2021.11.1-x86_64-linux-ubuntu14/bin/openocd -f openocd_mcpu.cfg
+
+For more information, please refer to document
+"hifive-premier-p550-software-reference-manual.pdf".
