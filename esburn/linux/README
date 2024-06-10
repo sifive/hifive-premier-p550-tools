@@ -1,0 +1,25 @@
+EsBurnTool is a linux based programming tool which is
+used to program bootchain, kernel and rootfs images to the board.
+
+Bootchain image needs to be flashed to SPI Flash present on SoM Board
+while kernel and rootfs will be stored on Carrier Board eMMC.
+
+EsBurnTool will program images to board based on configurations
+present in config.ini file.
+
+Two seperate config.ini files are present in this directory.
+1. spi_config.ini - To flash bootchain image to SPI flash
+2. emmc_config.ini - To flash kernel and rootfs to eMMC
+
+Usage: sudo EsBurnTool -c <config.ini file>
+
+For e.g:
+--------
+To flash bootchain image to SPI Flash
+	sudo EsBurnTool -c spi_config.ini
+
+To flash kernel and/or rootfs to eMMC
+	sudo EsBurnTool -c emmc_config.ini
+
+For more information, please refer to document
+"hifive-premier-p550-software-reference-manual.pdf".
