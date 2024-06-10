@@ -1,0 +1,8 @@
+JTAG tool is used for SoC debugging purpose.
+
+To use JTAG tool:
+  Extract riscv-openocd-0.11.0-2021.11.1-x86_64-linux-ubuntu14.tar file.
+
+  Run below command to access and debug the SoC using JTAG tool.
+  sudo ./riscv-openocd-0.11.0-2021.11.1-x86_64-linux-ubuntu14/bin/openocd -f openocd_mcpu.cfg
+  sudo ./riscv-openocd-0.11.0-2021.11.1-x86_64-linux-ubuntu14/bin/openocd -f openocd_scpu.cfg
