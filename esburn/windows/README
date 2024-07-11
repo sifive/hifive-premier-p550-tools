@@ -29,5 +29,13 @@ Usage:
    To flash kernel and/or rootfs to eMMC
         EsBurnTool.exe -c emmc_config.ini
 
+To update partition table, uncomment "erase_flash" parameter and
+"[mmc partition table]" section in emmc_config.ini file.
+
 For more information, please refer to document
 "hifive-premier-p550-software-reference-manual.pdf".
+
+---------------------------------------------------------
+MD5     : d6386b283168d8a6ad36b34481088db6
+---------------------------------------------------------
+
