@@ -1,0 +1,24 @@
+SOM firmware is the firmware which runs on the EIC7X SoC of the SOM board.
+The firmware includes ddr_init.bin,sys_init.bin and bootloader.bin.
+
+-------------------------------------------------------------------------------
+1.ddr_init.bin: DDR trainning and initialization firmware.
+  For 16GB DDR, the firmware is ddr16G_init.bin.
+  For 32GB DDR, the firmware is ddr32G_init.bin.
+-------------------------------------------------------------------------------
+2.sys_init.bin: Board initialization, like PLL initialization and fan startup.
+
+-------------------------------------------------------------------------------
+3.bootloader.bin: It consists of OpenSBI and U-boot.
+
+-------------------------------------------------------------------------------
+
+Notes:
+nsign_bootloader_secboot_ddr_16G_dvb2.bin is the bootchain file gengerated by
+the nsign tool after packing ddr16G_init.bin, sys_init.bin and bootloader.bin.
+
+nsign_bootloader_secboot_ddr_32G_dvb2.bin is the bootchain file gengerated by
+the nsign tool after packing ddr32G_init.bin, sys_init.bin and bootloader.bin.
+
+Users can generate your own bootchain with ddr_init.bin, sys_init.bin and
+your own bootloader.bin by the nsign tool.

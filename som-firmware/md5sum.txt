@@ -1,0 +1,6 @@
+bb2cbebe2d8bc119d3bddb4a8ac05179  bootloader.bin
+9eaa5fa432a80217b68dc3adc9de3540  ddr16G_init.bin
+b6402185ed710e66bf7c5b133867d8ca  ddr32G_init.bin
+2cb59e4b0c516b1258f2ed8477feee95  nsign_bootloader_secboot_ddr_16G_dvb2.bin
+f9969fd48b411c6e628326445be172b1  nsign_bootloader_secboot_ddr_32G_dvb2.bin
+d6df8dba1a7b66163a0e61b0f0fe2cab  sys_init.bin
