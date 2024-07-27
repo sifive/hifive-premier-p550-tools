@@ -31,3 +31,26 @@ Usage:
 
 For more information, please refer to document
 "hifive-premier-p550-software-reference-manual.pdf".
+
+The MD5 mentioned below is the md5sum value of EsBurnTool.
+===============================================================================
+Release Notes
+===============================================================================
+-------------------------------------------------------------------------------
+Version: 2024-07-27
+MD5:819453c4bb67c4499ea96c07bd6438ba
+-------------------------------------------------------------------------------
+
+-----------+
+Change Log |
+-----------+
+
+-------------------------------------------------------------------------------
+Version: 2024-07-27
+MD5:819453c4bb67c4499ea96c07bd6438ba
+-------------------------------------------------------------------------------
+CR: Delete the parameters "flash_stg" and "erase_flash" in the config file
+CR: Add the parameter "serverip" : User-specified tftp serverip
+CR: Add the parameter "erase_partition" : Whether to erase emmc partition table y/n
+-------------------------------------------------------------------------------
+
