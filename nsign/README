@@ -6,3 +6,7 @@ It is used to create bootchain image from individual components
 Usage: nsign <config_file>
 
 e.g. ./nsign default.cfg
+
+---------------------------------------------------------
+MD5 : aadf87575b5a73e96fa4b570a24fb648
+---------------------------------------------------------
