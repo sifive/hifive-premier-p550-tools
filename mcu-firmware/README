@@ -11,7 +11,7 @@ Release Notes
 
 -------------------------------------------------------------------------------
 Release Version: 2.5
-MD5:2343af01d84b441afa61609325da8054
+MD5:07c70bd66d6bbec85ae9dbc217cfd90d
 -------------------------------------------------------------------------------
 
 -----------+
@@ -19,12 +19,13 @@ Change Log |
 -----------+
 
 -------------------------------------------------------------------------------
-Version: 2.5, 2024-07-22
-MD5:2343af01d84b441afa61609325da8054
+Version: 2.5, 2024-08-05
+MD5:07c70bd66d6bbec85ae9dbc217cfd90d
 -------------------------------------------------------------------------------
 CR: Support som console redirection to UART or Telnet.
 TR: Make the four buttons(Power, SOC Reset, Recovery, MCU RESET) be handled as
     soon as the MCU LED is on.
+TR: Fix the bug of Bootsel IO pins was changed by mistake
 
 -------------------------------------------------------------------------------
 Version: 2.4, 2024-06-27
