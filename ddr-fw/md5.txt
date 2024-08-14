@@ -1,3 +1,9 @@
 ---------------------------------------------------------
-MD5 : 1214a5ee5b4bbb64d4a020b2d388b76f
+Changelogs:
+    1.support lpddr4x 4266,lpddr5 16/32G 6400,lpddr5 d2d in same firmware
+    2.build lpddr4x/lppdr5 16/32G in same time
+    3.The ddr type is automatically matched
+    4.version changed to 1.2
+---------------------------------------------------------
+MD5 : 720a0d7b3daad0b28e0aad6449595dd6
 ---------------------------------------------------------
