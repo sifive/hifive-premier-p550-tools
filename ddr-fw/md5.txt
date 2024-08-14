@@ -5,5 +5,11 @@ Changelogs:
     3.The ddr type is automatically matched
     4.version changed to 1.2
 ---------------------------------------------------------
-MD5 : 720a0d7b3daad0b28e0aad6449595dd6
+MD5 : 
+720a0d7b3daad0b28e0aad6449595dd6  ddr_fw.bin
+d68c2ca1a519464c6521b54ec856b20d  ddr_fw_1600.bin
+03a7e04d58591512634ce5a9572561fa  ddr_fw_3200.bin
+e539984e4b89d0650cad769533ea48ad  ddr_fw_4266.bin
+44ed78a2d463b8adb97c9eb07af8948f  ddr_fw_5500.bin
+720a0d7b3daad0b28e0aad6449595dd6  ddr_fw_6400.bin
 ---------------------------------------------------------
