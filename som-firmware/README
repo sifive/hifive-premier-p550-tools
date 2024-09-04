@@ -1,10 +1,11 @@
 SOM firmware is the firmware which runs on the EIC7X SoC of the SOM board.
-The firmware includes ddr_init.bin,sys_init.bin and bootloader.bin.
+The firmware includes ddr_fw.bin,sys_init.bin and bootloader.bin.
 
 -------------------------------------------------------------------------------
-1.ddr_init.bin: DDR trainning and initialization firmware.
-  For 16GB DDR, the firmware is ddr16G_init.bin.
-  For 32GB DDR, the firmware is ddr32G_init.bin.
+1.ddr_fw.bin: DDR trainning and initialization firmware.
+*Notes:
+  The ddr_fw.bin is now able to cover 16GB and 32GB size of DDR.
+  The ddr16G_init.bin and ddr32G_init.bin is deprecated.
 -------------------------------------------------------------------------------
 2.sys_init.bin: Board initialization, like PLL initialization and fan startup.
 
@@ -14,11 +15,33 @@ The firmware includes ddr_init.bin,sys_init.bin and bootloader.bin.
 -------------------------------------------------------------------------------
 
 Notes:
-nsign_bootloader_secboot_ddr_16G_dvb2.bin is the bootchain file gengerated by
-the nsign tool after packing ddr16G_init.bin, sys_init.bin and bootloader.bin.
-
-nsign_bootloader_secboot_ddr_32G_dvb2.bin is the bootchain file gengerated by
-the nsign tool after packing ddr32G_init.bin, sys_init.bin and bootloader.bin.
+nsign_bootloader_secboot_ddr_dvb2.bin is the bootchain file gengerated by
+the nsign tool after packing sys_init.bin, ddr_fw.bin and bootloader.bin.
 
 Users can generate your own bootchain with ddr_init.bin, sys_init.bin and
 your own bootloader.bin by the nsign tool.
+
+===============================================================================
+Release Notes
+===============================================================================
+
+-------------------------------------------------------------------------------
+Release Version: 2024-09-04
+-------------------------------------------------------------------------------
+
+-----------+
+Change Log |
+-----------+
+
+-------------------------------------------------------------------------------
+Version: 2024-09-04
+MD5:
+a05d4da442afc35fd5bde5a5e3e7d3fd  bootloader.bin
+720a0d7b3daad0b28e0aad6449595dd6  ddr_fw.bin
+df825b874e3d32430f3768e47f7e7222  nsign_bootloader_secboot_ddr_dvb2.bin
+d6df8dba1a7b66163a0e61b0f0fe2cab  sys_init.bin
+-------------------------------------------------------------------------------
+ddr_fw:  Commit-Id used is d5708b0414c351ed13111cd9ce24a74cc9e19f99
+OpenSBI: Commit-Id used is 62fb5ebb6efca2cd2c50e09c33299c55c2109e5a
+         Disable speculative access.
+U-boot:  Commit-Id used is 25d005112b0668ad5030e93e11b04a915a13205f
