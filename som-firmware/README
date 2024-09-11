@@ -21,6 +21,18 @@ the nsign tool after packing sys_init.bin, ddr_fw.bin and bootloader.bin.
 Users can generate your own bootchain with ddr_init.bin, sys_init.bin and
 your own bootloader.bin by the nsign tool.
 
+The DDR firmware of different frequency with ecc enabled is also provided, as
+listed below:
+e6611f2896895a88fd5f27d3d1b81fdc  ddr_fw_1600_ecc.bin
+aa405f4199447c1aeaed1094b3e7b629  ddr_fw_3200_ecc.bin
+f2f00b3d371fcd47d58184cfc998d331  ddr_fw_4266_ecc.bin
+27f8aea0bd4379d0540d209d38327c2d  ddr_fw_5500_ecc.bin
+e9af77fece23ba386824eb9d92ee354a  ddr_fw_6400_ecc.bin
+When DDR ecc is enabled, 1/8 of the original DDR size starting from the highest
+address is reserved for ecc space. Make sure this area is procted by pmp in
+opensbi or the CPU speculative access mode is off, and is not used in uboot and
+linux.
+
 ===============================================================================
 Release Notes
 ===============================================================================
